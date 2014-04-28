@@ -10,8 +10,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'monban'
-#group :development do
- # gem 'pry-rails'
-#  gem 'better_errors'
- # gem 'binding_of_caller'
-#end
+group :development do
+  gem 'pry-rails'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end

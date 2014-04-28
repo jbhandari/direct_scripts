@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
   def create
     user = authenticate_session(session_params)
     sign_in(user) do
-      respond_with(user, location: root_path) and return
+      respond_with(user, location: root_path)
     end
     render :new
   end
@@ -23,4 +23,3 @@ class SessionsController < ApplicationController
     params.require(:session).permit(:email, :password)
   end
 end
-
