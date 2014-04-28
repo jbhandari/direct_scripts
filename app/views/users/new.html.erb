@@ -1,20 +1,24 @@
 <%= form_for @user do |form| %>
+  
   <div>
     <%= form.label :email %>
     <%= form.email_field :email %>
   </div>
+  
   <div>
     <%= form.label :password %>
     <%= form.password_field :password %>
   </div>
+  
   <div>
     I am a:<br>
     <%= form.radio_button :profile, 'Patient' %> Patient<br>
     <%= form.radio_button :profile, 'Physician' %> Physician <br>
     <%= form.radio_button :profile, 'Clinic' %> Clinic <br>
-
   </div>
+  
   <div>
     <%= form.submit "Sign up" %>
+  
   </div>
 <% end %>
