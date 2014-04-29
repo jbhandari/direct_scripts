@@ -1,5 +1,8 @@
 class PhysiciansController < ApplicationController
 
+  def index
+  end
+  
   def edit
     @physician = Physician.find(params[:id])
   end
@@ -10,8 +13,6 @@ class PhysiciansController < ApplicationController
     redirect_to physicians_path
   end
 
-  def index
-  end
   private
 
   def physician_params
@@ -23,4 +24,5 @@ class PhysiciansController < ApplicationController
     :specialty,
     :license_number)
   end
+
 end

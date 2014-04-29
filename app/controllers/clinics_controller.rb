@@ -1,5 +1,9 @@
 class ClinicsController < ApplicationController
 
+  def index
+    @clinic = current_user
+  end
+
   def edit
     @clinic = Clinic.find(params[:id])
   end
@@ -8,10 +12,6 @@ class ClinicsController < ApplicationController
     clinic = Clinic.find(params[:id])
     clinic.update(clinic_params)
     redirect_to clinics_path
-  end
-
-  def index
-    @clinic = current_user
   end
 
   private

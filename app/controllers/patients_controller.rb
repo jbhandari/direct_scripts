@@ -1,7 +1,10 @@
 class PatientsController < ApplicationController
 
+  def index
+  end
+
   def edit
-  @patient = Patient.find(params[:id])
+    @patient = Patient.find(params[:id])
   end
 
   def update

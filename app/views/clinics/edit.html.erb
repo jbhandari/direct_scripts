@@ -2,10 +2,10 @@
 
 <%= simple_form_for @clinic do |f| %>
   <%= f.input :name %>
-  <%= f.input :address, :placeholder => "Street Address", as: :string %>
-  <%= f.input :locality, :label => false, :placeholder => "City/Town" %>
-  <%= f.input :zip_postal, :label => false, :placeholder => "Zip/Postal Code" %>
-  <%= f.input :state_prov, :label => false, :placeholder => "State/Province" %>
+  <%= f.input :address, placeholder: "Street Address", as: :string %>
+  <%= f.input :locality, label: false, placeholder: "City/Town" %>
+  <%= f.input :zip_postal, label: false, placeholder: "Zip/Postal Code" %>
+  <%= f.input :state_prov, label: false, placeholder: "State/Province" %>
   <%= f.input :country %>
   <%= f.input :phone %>
   <%= f.button :submit, "Complete Sign Up" %>
