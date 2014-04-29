@@ -17,14 +17,14 @@ class PatientsController < ApplicationController
 
   def patient_params
     params.require(:patient).permit(
-    :first_name,
-    :last_name,
-    :gender,
-    :age,
-    :address,
-    :phone_number,
-    :insurance_provider,
-    :policy_number)
+      :first_name,
+      :last_name,
+      :gender,
+      :age,
+      :address,
+      :phone_number,
+      :insurance_provider,
+      :policy_number)
   end
 
 end
