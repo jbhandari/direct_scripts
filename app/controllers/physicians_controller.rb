@@ -17,12 +17,12 @@ class PhysiciansController < ApplicationController
 
   def physician_params
     params.require(:physician).permit(
-    :first_name,
-    :last_name,
-    :state_prov,
-    :gender,
-    :specialty,
-    :license_number)
+      :first_name,
+      :last_name,
+      :state_prov,
+      :gender,
+      :specialty,
+      :license_number)
   end
 
 end
