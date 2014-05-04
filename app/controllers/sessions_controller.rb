@@ -6,10 +6,12 @@ class SessionsController < ApplicationController
 
   def create
     user = authenticate_session(session_params)
-    sign_in(user) do
-      respond_with(user, location: root_path)
+    if sign_in(user)
+      redirect_to redirect_path_for(user)
+    else
+      flash[:notice] = 'Wrong Password!'
+      render :new
     end
-    render :new
   end
 
   def destroy
@@ -19,7 +21,12 @@ class SessionsController < ApplicationController
 
   private
 
+  def redirect_path_for(user)
+    user.type.pluralize.to_sym
+  end
+
   def session_params
     params.require(:session).permit(:email, :password)
   end
+
 end

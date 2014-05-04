@@ -7,8 +7,12 @@ class UsersController < ApplicationController
 
   def create
     @user = sign_up(user_params)
-    sign_in(@user)
-    redirect_to [:edit, current_user.profile]
+    if @user.valid?
+      sign_in(@user)
+      redirect_to [:edit, @user.profile]
+    else
+      render :new
+    end
   end
 
   private
@@ -16,8 +20,8 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(
       :email,
-      :password
-    ).merge(profile: user_profile)
+      :password).
+      merge(profile: user_profile)
   end
 
   def user_profile
@@ -35,4 +39,5 @@ class UsersController < ApplicationController
   def valid_profile_class?
     %w(Patient Physician Clinic).include? params[:user][:profile]
   end
+
 end

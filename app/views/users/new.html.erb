@@ -1,6 +1,15 @@
 <h2> Sign Up </h2>
 <h4> Step 1 of 2 </h4>
 <%= form_for @user do |form| %>
+
+  <% if @user.errors.any? %>
+    Could not save user for the following reasons:
+    <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
   
   <div>
     <%= form.label :email %>

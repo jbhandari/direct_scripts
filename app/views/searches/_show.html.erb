@@ -1,0 +1,11 @@
+<h3> Patient Search Query: "<%= @query %>" </h3>
+<% @patients.each do |patient| %>
+  <p>Patient ID: <%= patient.id %> </p>
+  <p>Name:<%= patient.name %></p>
+  <p>Gender:<%= patient.gender  %></p>
+  <p>D.O.B:<%= patient.birth_date %></p>
+  <p>
+    <%= patient.locality %>,
+    <%= patient.state_prov %>
+  </p>
+<% end %>
