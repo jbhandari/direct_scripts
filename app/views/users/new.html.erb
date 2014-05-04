@@ -1,7 +1,6 @@
 <h2> Sign Up </h2>
 <h4> Step 1 of 2 </h4>
 <%= form_for @user do |form| %>
-
   <% if @user.errors.any? %>
     Could not save user for the following reasons:
     <ul>
@@ -10,26 +9,26 @@
       <% end %>
     </ul>
   <% end %>
-  
+
   <div>
     <%= form.label :email %>
     <%= form.email_field :email %>
   </div>
-  
+
   <div>
     <%= form.label :password %>
     <%= form.password_field :password %>
   </div>
-  
+
   <div>
-    I am a:<br>
-    <%= form.radio_button :profile, 'Patient' %> Patient<br>
-    <%= form.radio_button :profile, 'Physician' %> Physician <br>
-    <%= form.radio_button :profile, 'Clinic' %> Clinic <br>
+    <p> I am a: </p>
+    <p><%= form.radio_button :profile, 'Patient' %> Patient</p>
+    <p><%= form.radio_button :profile, 'Physician' %> Physician </p>
+    <p><%= form.radio_button :profile, 'Clinic' %> Clinic </p>
   </div>
-  
+
   <div>
     <%= form.submit "Sign up" %>
-  
   </div>
+
 <% end %>
