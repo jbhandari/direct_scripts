@@ -8,6 +8,16 @@
 </head>
 <body>
 
+<div id ='user welcome'>
+  <% if signed_in? && current_user.profile_created? %>
+    Signed in as
+    <%= current_user.profile_type %>:
+    <%= current_user.profile.name %>
+    <%= button_to 'sign out', session_path, method: :delete %>
+  <% else %>
+  <% end %>
+</div>
+
 <%= yield %>
 
 </body>

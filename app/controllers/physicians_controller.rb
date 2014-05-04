@@ -2,7 +2,7 @@ class PhysiciansController < ApplicationController
 
   def index
   end
-  
+
   def edit
     @physician = Physician.find(params[:id])
   end
@@ -17,8 +17,7 @@ class PhysiciansController < ApplicationController
 
   def physician_params
     params.require(:physician).permit(
-      :first_name,
-      :last_name,
+      :name,
       :state_prov,
       :gender,
       :specialty,

@@ -1,13 +1,12 @@
 <p> Step 2 of 2 </p>
 
 <%= simple_form_for @patient do |f| %>
-  <%= f.input :first_name %>
-  <%= f.input :last_name %>
+  <%= f.input :name %>
   <%= f.input :gender %>
   <%= f.input :birth_date, as: :date, start_year: Date.today.year - 100, end_year: Date.today.year %>
   <%= f.input :address, placeholder: "Street Address", as: :string %>
   <%= f.input :zip_postal, label: false, placeholder: "Zip/Postal Code" %>
-  <%= f.input :locality, label: false, :placeholder: "City/Town" %>
+  <%= f.input :locality, label: false, placeholder: "City/Town" %>
   <%= f.input :state_prov, label: false, placeholder: "State/Province" %>
   <%= f.input :country %>
   <%= f.input :phone_number %>

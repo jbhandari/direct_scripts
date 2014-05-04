@@ -11,7 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140429193129) do
+ActiveRecord::Schema.define(version: 20140502184720) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "clinics", force: true do |t|
     t.string   "name"
@@ -25,11 +28,14 @@ ActiveRecord::Schema.define(version: 20140429193129) do
     t.string   "country"
   end
 
+  create_table "patient_searchers", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "patients", force: true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
+    t.string   "name"
     t.string   "gender"
-    t.string   "birth_date"
     t.text     "address"
     t.string   "phone_number"
     t.text     "insurance_provider"
@@ -40,15 +46,25 @@ ActiveRecord::Schema.define(version: 20140429193129) do
     t.string   "locality"
     t.string   "state_prov"
     t.string   "country"
+    t.date     "birth_date"
   end
 
   create_table "physicians", force: true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
+    t.string   "name"
     t.string   "state_prov"
     t.string   "gender"
     t.string   "specialty"
     t.integer  "license_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "scripts", force: true do |t|
+    t.string   "med"
+    t.string   "dose"
+    t.text     "directions"
+    t.integer  "pill_count"
+    t.integer  "refills"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -62,6 +78,6 @@ ActiveRecord::Schema.define(version: 20140429193129) do
     t.string   "profile_type"
   end
 
-  add_index "users", ["profile_id", "profile_type"], name: "index_users_on_profile_id_and_profile_type"
+  add_index "users", ["profile_id", "profile_type"], name: "index_users_on_profile_id_and_profile_type", using: :btree
 
 end
