@@ -1,0 +1,15 @@
+<h3> Patient Information </h3>
+
+<div id = 'patient-info'>
+  <p> Patient ID: <%= patient.id %> </p>
+  <p>Name: <%= patient.name.capitalize %></p>
+  <p>Gender: <%= patient.gender.capitalize %></p>
+  <p>Date of Birth: <%= patient.birth_date %></p>
+  <p>Address: <%= patient.address.titleize %></p>
+  <p>City/Town: <%= patient.locality.titleize %></p>
+  <p>State/Province: <%= patient.state_prov.titleize %></p>
+  <p>Country: <%= patient.country.titleize %></p>
+  <p>Phone Number: <%= patient.phone_number %></p>
+  <p>Insurance Provider: <%= patient.insurance_provider.titleize %></p>
+  <p>Policy Number: <%= patient.policy_number %></p>
+</div>

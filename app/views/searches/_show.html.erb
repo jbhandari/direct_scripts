@@ -1,4 +1,5 @@
 <h3> Patient Search Query: "<%= @query %>" </h3>
+
 <% @patients.each do |patient| %>
   <p>Patient ID: <%= patient.id %></p>
   <p>Name:<%= patient.name %></p>
@@ -8,4 +9,7 @@
     <%= patient.locality %>,
     <%= patient.state_prov %>
   </p>
+
+  <%= button_to 'Write Prescription For This Patient', new_patient_script_path(patient), method: :get %>
+
 <% end %>
