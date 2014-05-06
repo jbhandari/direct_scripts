@@ -1,0 +1,9 @@
+<p> FIND PATIENT: </p>
+
+<%= form_for(:search, url: search_path, remote: true) do |form| %>
+  Patient Name or ID:
+  <%= form.text_field :query, placeholder: 'Patient Name or ID' %>
+  <%= form.submit "Find" %>
+<% end %>
+
+<div id ='patient-results'></div>

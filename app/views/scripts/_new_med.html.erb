@@ -1,0 +1,9 @@
+<%= simple_form_for [@patient, @script] do |script| %>
+  <%= script.input :med, label: "Name of Medication", placeholder: "Name of Medication" %>
+  <%= script.input :dose, label: "Dosage", placeholder: "Dosage" %>
+  <%= script.input :pill_count, label: "Pill Count", placeholder: "Pill Count" %>
+  <%= script.input :refills, placeholder: "#" %>
+  <%= script.input :directions, placeholder: "Directions" %>
+  <%# BUTTON TO ADD MORE MEDS %>
+  <%# BUTTON TO FINISH SCRIPT %>
+<% end %>
