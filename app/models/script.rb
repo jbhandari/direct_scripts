@@ -1,6 +1,6 @@
 class Script < ActiveRecord::Base
 
-  has_one :physician
-  has_one :patient
+  belongs_to :physician
+  belongs_to :patient
 
 end
