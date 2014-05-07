@@ -3,8 +3,16 @@
 <%= simple_form_for @physician do |f| %>
   <%= f.input :name %>
   <%= f.input :gender %>
-  <%= f.input :state_prov, label: "State/Province" %>
   <%= f.input :license_number, as: :string %>
+  <%= f.input :dea_id, label: "DEA Number" %>
+  <%= f.input :npi_id, label: "NPI Number" %>
+  <%= f.input :upin_id, label: "UPIN Number" %>
   <%= f.input :specialty %>
+  <%= f.input :clinic_name %>
+  <%= f.input :clinic_address %>
+  <%= f.input :clinic_locality, label: "City/Town" %>
+  <%= f.input :clinic_state_prov, label: "State/Province" %>
+  <%= f.input :clinic_zip_postal, label: "ZIP/Postal" %>
+  <%= f.input :clinic_country, label: "Country" %>
   <%= f.button :submit, "Complete Sign up" %>
 <% end %>

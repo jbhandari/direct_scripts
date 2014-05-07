@@ -1,0 +1,9 @@
+<%= render 'patients/patient_info', patient: @patient %>
+<h2>  PRESCRIPTION BELOW </h2>
+<p>Medication: <%= @script.med %></p>
+<p>Dosage: <%= @script.dose %></p>
+<p>Directions: <%= @script.directions %>
+<p>Pill Count/ Total oz.: <%= @script.pill_count %></p>
+<p>Refills: <%= @script.refills %></p>
+<h2> PRESCRIBING PHYSICIAN </h2>
+<%= render 'physicians/physician_info', physician: @script.physician %>

@@ -4,11 +4,11 @@ class PhysiciansController < ApplicationController
   end
 
   def edit
-    @physician = Physician.find(params[:id])
+    @physician = find_physician
   end
 
   def update
-    physician = Physician.find(params[:id])
+    physician = find_physician
     physician.update(physician_params)
     redirect_to physicians_path
   end
@@ -21,7 +21,21 @@ class PhysiciansController < ApplicationController
       :state_prov,
       :gender,
       :specialty,
-      :license_number)
+      :license_number,
+      :dea_id,
+      :npi_id,
+      :upin_id,
+      :clinic_name,
+      :clinic_address,
+      :clinic_locality,
+      :clinic_state_prov,
+      :clinic_zip_postal,
+      :clinic_country
+    )
+  end
+
+  def find_physician
+    Physician.find(params[:id])
   end
 
 end
