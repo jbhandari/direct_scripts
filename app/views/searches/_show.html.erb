@@ -10,6 +10,6 @@
     <%= patient.state_prov %>
   </p>
 
-  <%= button_to 'Write Prescription For This Patient', new_patient_script_path(patient), method: :get %>
+  <%= link_to 'Write Prescription For This Patient', new_patient_script_path(patient) %>
 
 <% end %>
