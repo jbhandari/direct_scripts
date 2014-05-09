@@ -1,14 +1,16 @@
 class PatientsController < ApplicationController
+  before_action :ensure_signed_in, only: [:edit]
+  before_action :ensure_user_validity, only: [:edit]
 
   def index
   end
 
   def edit
-    @patient = Patient.find(params[:id])
+    @patient = find_patient
   end
 
   def update
-    patient = Patient.find(params[:id])
+    patient = find_patient
     patient.update(patient_params)
     redirect_to patients_path
   end
@@ -28,7 +30,12 @@ class PatientsController < ApplicationController
       :zip_postal,
       :locality,
       :state_prov,
-      :country)
+      :country
+    )
+  end
+
+  def find_patient
+    Patient.find(params[:id])
   end
 
 end

@@ -13,8 +13,10 @@ class ScriptsController < ApplicationController
   end
 
   def show
-    @script = Script.find(params[:id])
     @patient = find_patient
+    @script = Script.find_by(token: params[:id])
+    qr = Qrcode.new(patient_script_url(params[:patient_id], params[:id]))
+    @qr_code = qr.process
   end
 
   private

@@ -3,13 +3,14 @@ require 'mini_magick'
 require 'rqrcode/export/svg'
 
 class Qrcode
+  attr_reader :link
 
-  def initialize(script)
-    @link = script
+  def initialize(link)
+    @link = link
   end
 
   def to_s
-    @link.to_s
+    link.to_s
   end
 
   def process
