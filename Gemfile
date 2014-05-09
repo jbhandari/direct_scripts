@@ -12,8 +12,9 @@ gem 'spring',        group: :development
 gem 'monban'
 gem 'simple_form'
 gem 'country_select'
-gem 'rqrcode'
 gem 'nokogiri'
+gem 'rqrcode-with-patches'
+gem 'mini_magick'
 group :development do
   gem 'pry-rails'
   gem 'better_errors'

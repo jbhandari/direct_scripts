@@ -13,24 +13,7 @@
  *= require_tree .
  *= require_self
  */
-
- table {
-  border-width: 0;
-  border-style: none;
-  border-color: #0000ff;
-  border-collapse: collapse;
+#qr-code img {
+  height: 200px;
+  width: 200px;
 }
-td {
-  border-width: 0; 
-  border-style: none;
-  border-color: #0000ff; 
-  border-collapse: collapse; 
-  padding: 0; 
-  margin: 0; 
-  width: 10px; 
-  height: 10px; 
-}
-td.black { background-color: #000; }
-td.white { background-color: #fff; }
-
-

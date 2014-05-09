@@ -1,4 +1,6 @@
 class PhysiciansController < ApplicationController
+  before_action :ensure_signed_in, only: [:edit]
+  before_action :ensure_user_validity, only: [:edit]
 
   def index
   end
