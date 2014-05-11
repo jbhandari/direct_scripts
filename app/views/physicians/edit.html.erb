@@ -1,6 +1,7 @@
 <h2> Step 2 of 2 </h2>
 
 <%= simple_form_for @physician do |f| %>
+  <h3> Physician Information </h3>
   <%= f.input :name %>
   <%= f.input :gender %>
   <%= f.input :license_number, as: :string %>
@@ -8,6 +9,7 @@
   <%= f.input :npi_id, label: "NPI Number" %>
   <%= f.input :upin_id, label: "UPIN Number" %>
   <%= f.input :specialty %>
+  <h3> Clinic Information </h3>
   <%= f.input :clinic_name %>
   <%= f.input :clinic_address %>
   <%= f.input :clinic_locality, label: "City/Town" %>
