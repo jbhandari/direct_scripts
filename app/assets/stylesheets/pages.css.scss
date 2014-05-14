@@ -48,8 +48,8 @@
 
 #website-me {
   @include shift(4.0);
-  width: 100px;
-  height: 100px;
+  width: 64px;
+  height: 64px;
   opacity: 0.8;
   position: relative;
   top: 50px;
@@ -57,8 +57,8 @@
 
 #blog-me {
   @include shift(7.0);
-  width: 100px;
-  height: 100px;
+  width: 64px;
+  height: 64px;
    opacity: 0.8;
    position: relative;
    top: -110px;
@@ -66,8 +66,8 @@
 
 #linkedin-me{
   @include shift(4.0);
-  width: 100px;
-  height: 100px;
+  width: 64px;
+  height: 64px;
   opacity: 0.8;
   position: relative;
   top: -110px;
@@ -76,8 +76,8 @@
 
 #twitter-me {
   @include shift(5.5);
-  width: 100px;
-  height: 100px;
+  width: 64px;
+  height: 64px;
   opacity: 0.8;
   position: relative;
   top: -210px;
@@ -87,8 +87,8 @@
 
 #email-me{
   @include shift(7.0);
-  width: 100px;
-  height: 100px;
+  width: 64px;
+  height: 64px;
   opacity: 0.8;
   position: relative;
   top: -310px;
