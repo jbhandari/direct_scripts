@@ -1,3 +1,6 @@
-<div id ='send-meds'>
-  <%= button_to 'New Prescription', new_patient_finders_path, method: :get %>
+<div class="physician-wrapper">
+  <div id ='send-meds'>
+    <%= button_to 'New Prescription', new_patient_finders_path, method: :get %>
+  </div>
+  <%= render 'refills/vertical_tabs' %>
 </div>

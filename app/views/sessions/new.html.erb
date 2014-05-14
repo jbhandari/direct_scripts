@@ -1,16 +1,23 @@
-<%= form_for :session, url: session_path do |form| %>
-  <div>
-    <%= form.label :email %>
-    <%= form.email_field :email %>
+<div class ='sign-in-wrapper'>
+  <div id='sign-in-form'>
+    <div id='sign-up-pitch'><%= render 'sign_up_pitch' %></div>
+    <h3> Sign in </h3>
+    <%= form_for :session, url: session_path do |form| %>
+      <div>
+        <%= form.label :email %>
+        <%= form.email_field :email %>
+      </div>
+      <div>
+        <%= form.label :password %>
+        <%= form.password_field :password %>
+      </div>
+      <div>
+        <%= form.submit "Sign in" %>
+      </div>
+      <% if flash[:notice] %>
+        <div class="notice"><%= flash[:notice] %></div>
+      <% end %>
+    <% end %>
+    <div id='sign-in-separator'></div>
   </div>
-  <div>
-    <%= form.label :password %>
-    <%= form.password_field :password %>
-  </div>
-  <div>
-    <%= form.submit "Sign in" %>
-  </div>
-  <% if flash[:notice] %>
-    <div class="notice"><%= flash[:notice] %></div>
-  <% end %>
-<% end %>
+</div>

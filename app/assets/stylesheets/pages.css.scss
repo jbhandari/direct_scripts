@@ -1,0 +1,114 @@
+#about-wrapper {
+  @include span-columns(10);
+  @include shift(1);
+  background-color: #F8F8F8 ;
+  height: em(450);
+}
+
+#about-info {
+  @include shift(1);
+  position: relative;
+  text-align: center;
+  padding-right: 80px;
+  font-size: 15px;
+  top: 50px;
+}
+
+#metis-logo{
+  height:100px;
+  width:100px;
+  @include shift(4);
+  top: 30px;
+  position: relative;
+}
+
+#thoughtbot-logo{
+  height:125px;
+  width:125px;
+  @include shift(6);
+  top: -80px;
+  position: relative;
+}
+
+#contact-wrapper {
+  @include span-columns(10);
+  @include shift(1);
+  background-color: #F8F8F8 ;
+  height: em(450);
+}
+
+#github-me {
+  @include shift(5.5);
+  width: 60px;
+  height: 60px;
+  opacity: 0.8;
+  top: -50px;
+  position: relative;
+}
+
+#website-me {
+  @include shift(4.0);
+  width: 100px;
+  height: 100px;
+  opacity: 0.8;
+  position: relative;
+  top: 50px;
+}
+
+#blog-me {
+  @include shift(7.0);
+  width: 100px;
+  height: 100px;
+   opacity: 0.8;
+   position: relative;
+   top: -110px;
+}
+
+#linkedin-me{
+  @include shift(4.0);
+  width: 100px;
+  height: 100px;
+  opacity: 0.8;
+  position: relative;
+  top: -110px;
+}
+
+
+#twitter-me {
+  @include shift(5.5);
+  width: 100px;
+  height: 100px;
+  opacity: 0.8;
+  position: relative;
+  top: -210px;
+
+}
+
+
+#email-me{
+  @include shift(7.0);
+  width: 100px;
+  height: 100px;
+  opacity: 0.8;
+  position: relative;
+  top: -310px;
+}
+
+#name-me {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: light;
+  font-size: 40px;
+  text-align: center;
+  top: 80px;
+  position: relative;
+}
+
+#social-wrapper {
+  top: 100px;
+  position: relative;
+}
+
+
+
+
+

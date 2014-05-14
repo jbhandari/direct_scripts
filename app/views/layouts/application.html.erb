@@ -6,19 +6,49 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="<%= body_class %>">
+<div id='wrapper'>
 
-<div id ='user welcome'>
-  <% if signed_in? && current_user.profile_created? %>
-    Signed in as
-    <%= current_user.profile_type %>:
-    <%= current_user.profile.name %>
-    <%= button_to 'sign out', session_path, method: :delete %>
-  <% else %>
-  <% end %>
+  <div id ='user-welcome'>
+    <% if signed_in? && current_user.profile_created? %>
+      Signed in as
+      <%= current_user.profile_type %>:
+      <%= current_user.profile.name %>
+      <div id='sign-out-button'>
+        <%= link_to 'sign out', session_path, method: :delete %>
+      </div>
+      <div id='goto_dash'>
+        <%= link_to 'Dashboard', root_path %>
+      </div>
+    <% else %>
+    <% end %>
+  </div>
+
+  <div id='logo'>
+    <%= link_to(image_tag("/images/logo_set.png"), root_path) %>
+  </div>
+
+  <div class='nav-wrapper'>
+    <div id='about'>
+       <%= link_to 'About', page_path('about') %>
+    </div>
+  
+    <div id='contact'>
+      <%= link_to 'Contact', page_path('contact') %>
+    </div>
+
+    <div id='health-news'>
+      <%= link_to 'News', "http://www.medicalnewstoday.com/" %>
+    </div>
+  </div>
+
+ 
+  <div id='copyright'>
+    <p> This app was created as a passion project for the Metis Web Development program by Jatin Bhandari </p>
+  </div>
+
+  <%= yield %>
+
 </div>
-
-<%= yield %>
-
 </body>
 </html>

@@ -1,0 +1,36 @@
+.users-wrapper{
+  @include span-columns(10);
+  @include shift(1);
+  background-color: #F8F8F8 ;
+  height: em(450);
+}
+
+#sign-up-form {
+  @include shift (1);
+  top: -330px;
+  position: relative;
+}
+
+#sign-up-separator {
+  @include shift(6);
+  border-right-style:solid;
+  border-width:1px;
+  width: 2px;
+  height: 275px;
+  position: relative;
+  bottom: -100px;
+}
+
+#sign-in-pitch{
+  @include shift (7.0);
+  position: relative;
+  bottom: 130px;
+  font-size: 20px;
+}
+
+#login-users{
+  @include shift (3.0);
+  top: 60px;
+  position: relative;
+  z-index: 10;
+}

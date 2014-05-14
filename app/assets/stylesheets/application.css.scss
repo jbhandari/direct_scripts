@@ -1,0 +1,117 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_self
+ */
+
+@import 'bourbon/bourbon';
+@import 'neat/neat';
+@import 'bitters/bitters';
+@import 'homes';
+@import 'physicians';
+@import 'refills/vertical-tabs';
+@import 'sessions';
+@import 'patient_finder';
+@import 'pages';
+@import 'users';
+@import 'scripts';
+
+body{
+  background-color: white ;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+}
+
+#wrapper {
+  @include outer-container;
+}
+
+#qr-code img {
+  height: 200px;
+  width: 200px;
+}
+
+#logo {
+  width: 110px;
+  height: 80px;
+  position: relative;
+  z-index: 2;
+  left: 8%;
+  top: -5px;
+}
+
+#about {
+  @include shift (8.5);
+  position: relative;
+  top: 1px;
+  width: 20px;
+}
+
+#health-news {
+  @include shift (9.3);
+  position: relative;
+  top: -47px; 
+  width: 20px;
+}
+
+#contact {
+  @include shift (10);
+  position: relative;
+  top: -23px;
+  width: 20px;
+}
+
+#goto_dash {
+  @include shift (7.1);
+  position: relative;
+  top: 75px;
+  width: 20px;
+  z-index: 10;
+  font-size: 17px;
+}
+
+
+.nav-wrapper {
+  z-index: 1;
+  width: 90%;
+  height: 30px;
+  position: relative;
+  background-color: #F8F8F8 ;
+  border-radius: 20px;
+  left: 5%;
+  z-index: 1;
+  top: -30px;
+  box-shadow: 3px 3px 3px 3px #888888;
+}
+
+#user-welcome {
+  text-align: right;
+  font-size: 14px;
+}
+
+#sign-out-button {
+  right: 320px;
+  position: relative;
+  @include button(pill, #F8F8F8);
+  height: 25px;
+  width: 80px;
+  font-size: 12px;
+  color: white;
+}
+
+#copyright{
+  position: absolute;
+  bottom: 0;
+  @include shift (3);
+  font-size: 11px;
+  color: #909090;
+}

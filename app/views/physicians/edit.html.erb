@@ -1,20 +1,22 @@
 <h2> Step 2 of 2 </h2>
 
-<%= simple_form_for @physician do |f| %>
-  <h3> Physician Information </h3>
-  <%= f.input :name %>
-  <%= f.input :gender %>
-  <%= f.input :license_number, as: :string %>
-  <%= f.input :dea_id, label: "DEA Number" %>
-  <%= f.input :npi_id, label: "NPI Number" %>
-  <%= f.input :upin_id, label: "UPIN Number" %>
-  <%= f.input :specialty %>
-  <h3> Clinic Information </h3>
-  <%= f.input :clinic_name %>
-  <%= f.input :clinic_address %>
-  <%= f.input :clinic_locality, label: "City/Town" %>
-  <%= f.input :clinic_state_prov, label: "State/Province" %>
-  <%= f.input :clinic_zip_postal, label: "ZIP/Postal" %>
-  <%= f.input :clinic_country, label: "Country" %>
-  <%= f.button :submit, "Complete Sign up" %>
-<% end %>
+  <div id='physician-sign-up'>
+    <%= simple_form_for @physician do |f| %>
+      <h3> Physician Information </h3>
+      <%= f.input :name %>
+      <%= f.input :gender %>
+      <%= f.input :license_number, as: :string %>
+      <%= f.input :dea_id, label: "DEA Number" %>
+      <%= f.input :npi_id, label: "NPI Number" %>
+      <%= f.input :upin_id, label: "UPIN Number" %>
+      <%= f.input :specialty %>
+      <h3> Clinic Information </h3>
+      <%= f.input :clinic_name %>
+      <%= f.input :clinic_address %>
+      <%= f.input :clinic_locality, label: "City/Town" %>
+      <%= f.input :clinic_state_prov, label: "State/Province" %>
+      <%= f.input :clinic_zip_postal, label: "ZIP/Postal" %>
+      <%= f.input :clinic_country, label: "Country" %>
+      <%= f.button :submit, "Complete Sign up" %>
+    <% end %>
+  </div>

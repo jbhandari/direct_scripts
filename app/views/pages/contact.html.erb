@@ -1,0 +1,30 @@
+<div id='contact-wrapper'>
+  <div id='name-me'> Jatin Bhandari </div>
+  <div id='social-wrapper'>
+    <div id='website-me'>
+      <%= link_to(image_tag("computer.png"), "http://jatin.io" ) %>
+    </div>
+
+    <div id='github-me'>
+       <%= link_to(image_tag("github.png"), "https://github.com/jbhandari" ) %>
+    </div>
+
+    <div id='blog-me'>
+      <%= link_to(image_tag("notepad.png"), "https://g2b.ghost.io" ) %>
+    </div>
+
+    <div id='linkedin-me'>
+      <%= link_to(image_tag("linkedin.png"), "https://www.linkedin.com/in/jatinbhandari" ) %>
+    </div>
+   
+    <div id='twitter-me'>
+      <%= link_to(image_tag("twitter2.png"), "https://twitter.com/g2jatin" ) %>
+    </div>
+    
+     <div id='email-me'>
+      <%= mail_to "jatin@jatin.io" do %>
+       <%= image_tag("gmail2.png") %>
+      <% end %>
+    </div>
+  </div>
+</div>

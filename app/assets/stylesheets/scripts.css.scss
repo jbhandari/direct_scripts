@@ -1,0 +1,8 @@
+#script-container{
+  @include span-columns(10);
+  @include shift(1);
+  background-color: #F8F8F8 ;
+  height: em(450);
+  overflow:scroll;
+  padding: 50px;
+}

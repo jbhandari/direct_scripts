@@ -1,0 +1,52 @@
+.homes-index {
+  background-image: asset_url('Healthcare-v2.jpg') ;
+  background-repeat:no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#welcome-wrapper {
+  @include span-columns(6);
+  background-color: rgba(100, 100, 100, 0.5);
+}
+
+#welcome-tag {
+  color: white;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: light;
+  z-index: 4;
+  position: relative;
+  top: 15px;
+  font-size: 30px;
+  left: 15%;
+  padding-right: 3px;
+}
+
+#welcome-message {
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  z-index: 4;
+  position: relative;
+  text-align: left;
+  top: 10px;
+  font-size: 20px;
+  padding-left: 20px;
+  padding-right: 10px;
+}
+
+#login-button {
+  position: relative;
+  z-index: 5;
+  left: 25%;
+  top: 6px;
+}
+
+#sign-up-button {
+  position: relative;
+  z-index: 5;
+  left: 45%;
+  top: -40px;
+  padding: 5px;
+}
