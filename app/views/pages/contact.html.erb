@@ -1,0 +1,17 @@
+<div id='contact-wrapper'>
+  <div id='name-me'> Jatin Bhandari </div>
+  <div id='social-wrapper'>
+    <ul>
+      <li><%= link_to(image_tag("computer copy.png"), "http://jatin.io" ) %></li>
+      <li><%= link_to(image_tag("github copy.png"), "https://github.com/jbhandari") %></li>
+      <li><%= link_to(image_tag("notepad copy.png"), "https://g2b.ghost.io" ) %></li>
+      <li><%= link_to(image_tag("linkedin copy.png"), "https://www.linkedin.com/in/jatinbhandari" ) %></li>
+      <li><%= link_to(image_tag("twitter2 copy.png"), "https://twitter.com/g2jatin" ) %></li>
+      <li>
+        <%= mail_to "jatin@jatin.io" do %>
+         <%= image_tag("gmail2.png") %>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</div>

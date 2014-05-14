@@ -1,0 +1,33 @@
+#accordion-container {
+  @include span-columns(10);
+  @include shift(2.5);
+}
+
+#script-container{
+  @include span-columns(10);
+  @include shift(1);
+  background-color: #F8F8F8 ;
+  height: em(450);
+  overflow:scroll;
+  padding: 50px;
+}
+
+#script-wrapper {
+  @include span-columns(10);
+  @include shift(1);
+  background-color: #F8F8F8 ;
+  height: em(500);
+  overflow: auto;
+  padding: 50px;
+}
+
+#qr-code-show {
+  @include shift(2);
+  position: relative;
+  top: 30px;
+  padding-bottom: 20px;
+}
+
+.script-tabs{
+  padding: 30px;
+}

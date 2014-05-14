@@ -1,7 +1,11 @@
-<h2> Welcome to DirectScripts </h2>
-
-<%= button_to 'Login', new_session_path, method: :get %>
-
-<%= button_to 'Sign Up', new_user_path, method: :get %>
-
-<div class="notice"><%= flash[:notice] %></div>
+<div id='welcome-wrapper'>
+  <div id='welcome-message'>
+    <div id='welcome-tag'>
+      <p>Welcome to DirectScripts</p>
+    </div>
+    <p> DirectScripts is an e-prescription application that allows for greater freedom for patients without sacrificing the privacy and security of a patient's prescription. Using DirectScripts ensures Physicians and Pharmacists that all filled prescriptions are easy find with a quick search. </p> 
+    <p> Log in or Sign up as a Physician, Patient, or Pharmacist. </p>
+    <div id='login-button'><%= button_to 'Login', new_session_path, method: :get %></div>
+    <div id='sign-up-button'><%= button_to 'Sign Up', new_user_path, method: :get %></div>
+  </div>
+</div>

@@ -11,4 +11,12 @@ class User < ActiveRecord::Base
     profile_type.downcase
   end
 
+  def physician?
+    profile_type == 'Physician'
+  end
+  
+  def patient?
+    profile_type == 'Patient'
+  end
+
 end

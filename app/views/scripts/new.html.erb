@@ -1,4 +1,6 @@
-<h2> New Prescription for <%= @patient.name.titleize %></h2>
-<%= render 'patients/patient_info', patient: @patient %>
-<h2> PRESCRIPTION  </h2>
-<%= render 'new_med', patient: @patient, script: @script %>
+<div id='script-container'>
+  <h2> New Prescription for <%= @patient.name.titleize %></h2>
+  <%= render 'patients/patient_info', patient: @patient %>
+  <h2> PRESCRIPTION  </h2>
+  <%= render 'new_med', patient: @patient, script: @script %>
+</div>
