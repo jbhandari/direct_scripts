@@ -1,13 +1,3 @@
-<h2> PATIENT INFORMATION </h2>
-<%= render 'patients/patient_info', patient: @patient %>
-
-<h2> PRESCRIPTION BELOW </h2>
-<%= render 'script_info', script: @script %>
-
-<h2> PRESCRIBING PHYSICIAN </h2>
-<%= render 'physicians/physician_info', physician: @script.physician %>
-
-<h2> PRESCRIPTION QR CODE </h2>
-<div id="qr-code">
-  <img src="data:image/svg+xml;utf8,<%= @qr_code %>">
+<div id='script-wrapper'>
+  <%= render 'refills/accordion_tabs' %>
 </div>

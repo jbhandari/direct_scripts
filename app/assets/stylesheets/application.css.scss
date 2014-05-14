@@ -24,6 +24,7 @@
 @import 'pages';
 @import 'users';
 @import 'scripts';
+@import 'refills/accordion-tabs';
 
 body{
   background-color: white ;
@@ -35,7 +36,7 @@ body{
   @include outer-container;
 }
 
-#qr-code img {
+.qrcode img {
   height: 200px;
   width: 200px;
 }

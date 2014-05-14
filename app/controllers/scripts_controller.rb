@@ -38,14 +38,6 @@ class ScriptsController < ApplicationController
 
   def create_qr_code
     qr = Qrcode.new(patient_script_url(params[:patient_id], params[:id]))
-    qr_code = qr.process
-    send_text(qr_code)
-    qr_code
+    qr.process
   end
-
-  def send_text(code)
-   text= TextMessage.new(code)
-   text.send
-  end
-
 end
