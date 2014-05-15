@@ -1,4 +1,9 @@
 class SearchesController < ApplicationController
+   respond_to :json
+  
+  def show
+    respond_with Drug.where("name ILIKE ?", "#{params[:term]}%").order("name ASC").limit(10)
+  end
 
   def create
     @query = params[:search][:query]
