@@ -19,4 +19,8 @@ class User < ActiveRecord::Base
     profile_type == 'Patient'
   end
 
+  def pharmacist?
+    profile_type == 'Pharmacist'
+  end
+
 end

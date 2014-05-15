@@ -15,6 +15,15 @@ class PatientsController < ApplicationController
     redirect_to patients_path
   end
 
+  def show
+    @patient = find_patient
+    if authorized_viewer?
+    else
+      flash[:notice] = 'Unauthorized'
+      redirect_to new_patient_finders_path
+    end
+  end
+
   private
 
   def patient_params
@@ -36,6 +45,12 @@ class PatientsController < ApplicationController
 
   def find_patient
     Patient.find(params[:id])
+  end
+
+  def authorized_viewer?
+    current_user.profile_type =='Physician' ||
+    current_user.profile_type =='Pharmacist' ||
+    current_user == @patient
   end
 
 end

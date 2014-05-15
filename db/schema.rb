@@ -11,22 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140508202915) do
+ActiveRecord::Schema.define(version: 20140515133634) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "clinics", force: true do |t|
-    t.string   "name"
-    t.text     "address"
-    t.string   "phone"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "locality"
-    t.string   "zip_postal"
-    t.string   "state_prov"
-    t.string   "country"
-  end
 
   create_table "patient_searchers", force: true do |t|
     t.datetime "created_at"
@@ -49,12 +37,27 @@ ActiveRecord::Schema.define(version: 20140508202915) do
     t.date     "birth_date"
   end
 
+  create_table "pharmacists", force: true do |t|
+    t.string   "name"
+    t.string   "college"
+    t.string   "license_id"
+    t.string   "pharmacy_name"
+    t.string   "pharmacy_address"
+    t.string   "locality"
+    t.string   "state_prov"
+    t.string   "country"
+    t.string   "zip_postal"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "phone"
+  end
+
   create_table "physicians", force: true do |t|
     t.string   "name"
     t.string   "state_prov"
     t.string   "gender"
     t.string   "specialty"
-    t.integer  "license_number"
+    t.string   "license_number"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "dea_id"
@@ -66,6 +69,8 @@ ActiveRecord::Schema.define(version: 20140508202915) do
     t.string   "clinic_state_prov"
     t.string   "clinic_zip_postal"
     t.string   "clinic_country"
+    t.string   "med_school"
+    t.string   "medical_board"
   end
 
   create_table "scripts", force: true do |t|
@@ -79,6 +84,7 @@ ActiveRecord::Schema.define(version: 20140508202915) do
     t.integer  "patient_id"
     t.integer  "physician_id"
     t.string   "token",        null: false
+    t.date     "date"
   end
 
   create_table "users", force: true do |t|

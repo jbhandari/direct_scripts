@@ -1,18 +1,17 @@
 <div class='patient-wrapper'>
   <h3> Step 2 of 2 </h3>
 
-  <%= simple_form_for @patient do |f| %>
+  <%= simple_form_for @pharmacist do |f| %>
     <%= f.input :name %>
-    <%= f.input :gender %>
-    <%= f.input :birth_date, as: :date, start_year: Date.today.year - 100, end_year: Date.today.year %>
-    <%= f.input :address, placeholder: "Street Address", as: :string %>
+    <%= f.input :college, label: "College of Pharmacy" %>
+    <%= f.input :license_id, label: "License Number" %>
+    <%= f.input :pharmacy_name %>
+    <%= f.input :pharmacy_address %>
     <%= f.input :locality, label: false, placeholder: "City/Town" %>
     <%= f.input :state_prov, label: "State/Province", collection: ["AK","AL","AR","AS","AZ","CA","CO","CT","DC","DE","FL","GA","GU","HI","IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MH","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","NY","OH","OK","OR","PA","PR","PW","RI","SC","SD","TN","TX","UT","VA","VI","VT","WA","WI","WV","WY","-CAN-", "AB", "BC", "MB", "NB", "NL", "NS", "NT","NU", "ON", "PE", "QC", "SK", "YT"] %>
     <%= f.input :zip_postal, label: false, placeholder: "Zip/Postal Code" %>
     <%= f.input :country, priority: [ "USA" ], collection: ["USA", "Canada"] %>
-    <%= f.input :phone_number %>
-    <%= f.input :insurance_provider, as: :string %>
-    <%= f.input :policy_number %>
-    <%= f.button :submit, "Complete Sign up" %>
+    <%= f.input :phone, label: "Pharmacy Phone Number" %>
+    <%= f.button :submit, "Finish" %>
   <% end %>
 </div>

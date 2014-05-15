@@ -6,18 +6,20 @@
       <h3> Physician Information </h3>
       <%= f.input :name %>
       <%= f.input :gender %>
-      <%= f.input :license_number, as: :string %>
+      <%= f.input :medical_board, label: "State Medical Board" %>
+      <%= f.input :license_number, label: "State License id" %>
       <%= f.input :dea_id, label: "DEA Number" %>
       <%= f.input :npi_id, label: "NPI Number" %>
       <%= f.input :upin_id, label: "UPIN Number" %>
       <%= f.input :specialty %>
+      <%= f.input :med_school, label: "Medical School" %>
       <h3> Clinic Information </h3>
       <%= f.input :clinic_name %>
       <%= f.input :clinic_address %>
       <%= f.input :clinic_locality, label: "City/Town" %>
-      <%= f.input :clinic_state_prov, label: "State/Province" %>
+      <%= f.input :clinic_state_prov, label: "State/Province", collection: ["AK","AL","AR","AS","AZ","CA","CO","CT","DC","DE","FL","GA","GU","HI","IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MH","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","NY","OH","OK","OR","PA","PR","PW","RI","SC","SD","TN","TX","UT","VA","VI","VT","WA","WI","WV","WY","-CAN-", "AB", "BC", "MB", "NB", "NL", "NS", "NT","NU", "ON", "PE", "QC", "SK", "YT"]%>
       <%= f.input :clinic_zip_postal, label: "ZIP/Postal" %>
-      <%= f.input :clinic_country, label: "Country" %>
+      <%= f.input :clinic_country, priority: [ "USA" ], collection: [ "USA", "Canada"] %>
       <%= f.button :submit, "Complete Sign up" %>
     <% end %>
   </div>

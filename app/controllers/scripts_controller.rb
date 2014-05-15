@@ -26,7 +26,8 @@ class ScriptsController < ApplicationController
       :dose,
       :directions,
       :pill_count,
-      :refills
+      :refills,
+      :date
     ).merge(
       patient: find_patient
     )
