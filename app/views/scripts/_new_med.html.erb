@@ -9,3 +9,17 @@
   <h4>---End of prescription set---</h4>
   <%= button_to "Finished Writing", patient_scripts_path(@patient) %>
 <% end %>
+
+<script type="text/javascript">
+  $("#script_med").autocomplete({
+    source: '/search',
+    select: function( event, ui ) {
+      $("#script_med").val(ui.item.name);
+      return false;
+    }
+  }).data('ui-autocomplete')._renderItem = function(ul, item) {
+    return $("<li>").
+      append("<a>" + item.name + "</a>").
+      appendTo(ul);
+  }
+</script>
