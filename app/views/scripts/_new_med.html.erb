@@ -1,5 +1,6 @@
 <%= simple_form_for [@patient, @script] do |script| %>
   <h4>---Start of prescription set--- </h4>
+  <%= script.input :date, as: :date, start_year: Date.today.year + 0, end_year: Date.today.year %>
   <%= script.input :med, label: "Name of Medication", placeholder: "Name of Medication" %>
   <%= script.input :dose, label: "Dosage", placeholder: "Dosage" %>
   <%= script.input :pill_count, label: "Pill Count/ oz.", placeholder: "Pill Count/ oz." %>
