@@ -1,0 +1,12 @@
+.pharm-wrapper {
+  @include span-columns(10);
+  @include shift(1);
+  background-color: #F8F8F8 ;
+  height: em(450);
+  overflow: auto;
+  padding: 50px;
+}
+
+#pharm-info {
+  @include shift(4.5);
+}

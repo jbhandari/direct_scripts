@@ -1,0 +1,14 @@
+<div id='pharm-info'>
+  <h6> Your Information </h6>
+  <p> Name: <%= pharmacist.name %></p>
+  <p> College of Pharmacy: <%= pharmacist.college %></p>
+  <p> Pharmacy License id: <%= pharmacist.license_id %></p>
+  <h6> Pharmacy Info: </h6>
+  <p>Pharmacy Name: <%= pharmacist.pharmacy_name %></p>
+  <p>Address: <%= pharmacist.pharmacy_address %></p>
+  <p>City: <%= pharmacist.locality %></p>
+  <p>State/Province: <%= pharmacist.state_prov %></p>
+  <p>ZIP/Postal Code: <%= pharmacist.zip_postal %></p>
+
+  <%= button_to "Find A Patient", new_patient_finders_path, method: :get %>
+</div>

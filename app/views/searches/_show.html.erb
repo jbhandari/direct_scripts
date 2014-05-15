@@ -10,6 +10,8 @@
     <%= patient.state_prov %>
   </p>
 
-  <%= link_to 'Write Prescription For This Patient', new_patient_script_path(patient) %>
-
+  <%= button_to 'See Patient Information', patient_path(patient), method: :get %>
+  <% if current_user.profile == 'Physician' %>
+    <%= button_to 'Write Prescription For This Patient', new_patient_script_path(patient), method: :get %>
+  <% end %>
 <% end %>

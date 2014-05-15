@@ -32,7 +32,9 @@ class PhysiciansController < ApplicationController
       :clinic_locality,
       :clinic_state_prov,
       :clinic_zip_postal,
-      :clinic_country
+      :clinic_country,
+      :med_school,
+      :medical_board
     )
   end
 

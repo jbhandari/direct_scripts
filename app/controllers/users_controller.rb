@@ -37,7 +37,7 @@ class UsersController < ApplicationController
   end
 
   def valid_profile_class?
-    %w(Patient Physician Clinic).include? params[:user][:profile]
+    %w(Patient Physician Pharmacist).include? params[:user][:profile]
   end
 
 end

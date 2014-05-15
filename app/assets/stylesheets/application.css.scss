@@ -25,6 +25,8 @@
 @import 'users';
 @import 'scripts';
 @import 'refills/accordion-tabs';
+@import 'patients';
+@import 'pharmacists';
 
 body{
   background-color: white ;
@@ -110,8 +112,9 @@ body{
 
 #copyright{
   position: absolute;
-  @include shift (4.5);
+  @include shift (4.0);
   font-size: 11px;
   color: #909090;
   bottom: 0;
+  padding-top: 20px;
 }
