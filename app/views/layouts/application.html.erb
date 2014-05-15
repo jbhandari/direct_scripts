@@ -38,17 +38,20 @@
     </div>
 
     <div id='health-news'>
-      <%= link_to 'News', "http://www.medicalnewstoday.com/" %>
+      <%= link_to 'News', page_path('news') %>
     </div>
   </div>
 
  
-  <div id='copyright'>
-    <p> This app was created as a passion project for the Metis Web Development program by Jatin Bhandari </p>
-  </div>
+  
 
   <%= yield %>
 
 </div>
+
+<div id='copyright'>
+  <p> This app was created as a passion project for the Metis Web Development program by Jatin Bhandari </p>
+</div>
+
 </body>
 </html>

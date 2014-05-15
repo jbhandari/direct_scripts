@@ -80,7 +80,6 @@ body{
   font-size: 17px;
 }
 
-
 .nav-wrapper {
   z-index: 1;
   width: 90%;
@@ -111,8 +110,8 @@ body{
 
 #copyright{
   position: absolute;
-  bottom: 0;
-  @include shift (3);
+  @include shift (4.5);
   font-size: 11px;
   color: #909090;
+  bottom: 0;
 }
