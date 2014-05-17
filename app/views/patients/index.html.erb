@@ -1,1 +1,4 @@
- <%= render 'refills/vertical_tabs' %>
+<div class='patient-wrapper'>
+ <h5><%= current_user.profile.name %></h5>
+ <%= render 'patient_info', patient: current_user.profile %>
+</div>

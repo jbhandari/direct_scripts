@@ -1,21 +1,21 @@
 <div id='patient-info'>
   <h5> Patient Information </h5>
-  <p>Patient ID: <%= @patient.id %></p>
-  <p>Name: <%= @patient.name.titleize %></p>
-  <p>Gender: <%= @patient.gender.capitalize %></p>
-  <p>Date of Birth: <%= @patient.birth_date %></p>
-  <p>Address: <%= @patient.address.titleize %></p>
-  <p>City/Town: <%= @patient.locality.titleize %></p>
-  <p>State/Province: <%= @patient.state_prov.upcase %></p>
-  <p>Country: <%= @patient.country.titleize %></p>
-  <p>Phone Number: <%= @patient.phone_number %></p>
-  <p>Insurance Provider: <%= @patient.insurance_provider.titleize %></p>
-  <p>Policy Number: <%= @patient.policy_number %></p>
-  <p>email: <%= @patient.user.email %></p>
+  <p>Patient ID: <%= patient.id %></p>
+  <p>Name: <%= patient.name.titleize %></p>
+  <p>Gender: <%= patient.gender.capitalize %></p>
+  <p>Date of Birth: <%= patient.birth_date %></p>
+  <p>Address: <%= patient.address.titleize %></p>
+  <p>City/Town: <%= patient.locality.titleize %></p>
+  <p>State/Province: <%= patient.state_prov.upcase %></p>
+  <p>Country: <%= patient.country.titleize %></p>
+  <p>Phone Number: <%= patient.phone_number %></p>
+  <p>Insurance Provider: <%= patient.insurance_provider.titleize %></p>
+  <p>Policy Number: <%= patient.policy_number %></p>
+  <p>email: <%= patient.user.email %></p>
 
   <%= button_to "Find Another Patient", new_patient_finders_path, method: :get %>
   <% if current_user.profile_type == 'Physician' %>
-    <%= button_to 'Write Prescription For This Patient', new_patient_script_path(@patient) , method: :get %>
+    <%= button_to 'Write Prescription For This Patient', new_patient_script_path(patient) , method: :get %>
   <% end %>
   <%= button_to "Dashboard", root_path, method: :get %>
 </div>
