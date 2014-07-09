@@ -1,28 +1,13 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+DirectScripts is an e-prescription application designed to for 3 types of users: Physicians, Pharmacists, and Patients.
 
-Things you may want to cover:
+It utilizes: 
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+  -Autocompletion features for medication names of currently approved FDA medications
+  -All prescriptions are created as QRcodes (Using the RQRcode Gem)
+  -Every Prescription has a unique url 
+  -Patient's can be searched by name or unique patient id
+  -This application was styled with the Bourbon family
+  
+  ![](http://jatin.io/public/DirectScripts.jpg)
