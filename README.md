@@ -1,6 +1,6 @@
 ##README
 
-DirectScripts is an e-prescription application designed to for 3 types of users: Physicians, Pharmacists, and Patients.
+DirectScripts is an e-prescription application designed for 3 types of users: Physicians, Pharmacists, and Patients.
 
 It utilizes: 
 
