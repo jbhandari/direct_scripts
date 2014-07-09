@@ -1,4 +1,4 @@
-== README
+##README
 
 DirectScripts is an e-prescription application designed to for 3 types of users: Physicians, Pharmacists, and Patients.
 
