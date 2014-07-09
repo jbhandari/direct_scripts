@@ -13,5 +13,7 @@ It utilizes:
   Patient's can be searched by name or unique patient id
 
   This application was styled with the Bourbon family
+
+This application was built in 3 weeks.
   
 ![](http://jatin.io/public/DirectScripts.jpg)
