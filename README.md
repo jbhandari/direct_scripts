@@ -10,4 +10,4 @@ It utilizes:
   -Patient's can be searched by name or unique patient id
   -This application was styled with the Bourbon family
   
-  ![](http://jatin.io/public/DirectScripts.jpg)
+![](http://jatin.io/public/DirectScripts.jpg)
