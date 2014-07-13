@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
   def physician?
     profile_type == 'Physician'
   end
-  
+
   def patient?
     profile_type == 'Patient'
   end

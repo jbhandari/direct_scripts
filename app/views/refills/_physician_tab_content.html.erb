@@ -5,6 +5,7 @@
 
     <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="tab2">Item 2</a>
     <div id="tab2" class="js-vertical-tab-content vertical-tab-content">
+      <%= render 'physicians/recent_scripts', physician: current_user.profile %>
     </div>
 
     <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="tab3">Item 3</a>

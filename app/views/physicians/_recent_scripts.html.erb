@@ -1,0 +1,6 @@
+<% @scripts.each do |script| %>
+  <p>Patient: <%= script.patient.name %><p>
+  <p>Medication: <%= script.med %>
+  <p>Date: <%= script.created_at.strftime('%v') %><p>
+  <p> --------------------------</p>
+<% end %>

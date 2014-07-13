@@ -3,6 +3,8 @@ class PhysiciansController < ApplicationController
   before_action :ensure_user_validity, only: [:edit]
 
   def index
+    check_authority
+    @scripts = current_user.profile.scripts
   end
 
   def edit
@@ -40,6 +42,12 @@ class PhysiciansController < ApplicationController
 
   def find_physician
     Physician.find(params[:id])
+  end
+
+  def check_authority
+    if current_user.profile_type != 'Physician'
+      redirect_to root_path
+    end
   end
 
 end
