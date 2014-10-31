@@ -1,0 +1,21 @@
+.first-container {
+  @include linear-gradient($primary-blue, lighten($primary-blue, 2%));
+  height: 550px;
+}
+
+.fluid-container {
+  height: 500px;
+  border: 1px solid #EEE;
+  color: $light-grey;
+}
+
+.last-container {
+  @include linear-gradient($primary-blue, lighten($primary-blue, 2%));
+  height: 450px;
+}
+.top-container {
+  @include span-columns(12);
+  z-index: 5;
+  position: fixed;
+  overflow: auto;
+}

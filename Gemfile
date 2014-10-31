@@ -23,9 +23,9 @@ gem 'flutie'
 
 group :development do
   gem 'debugger'
-  # gem 'pry-rails'
-  # gem 'better_errors'
-  # gem 'binding_of_caller'
+  gem 'pry-rails'
+  gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'spring'
   gem 'dotenv-rails'
 end

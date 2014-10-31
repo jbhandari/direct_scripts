@@ -41,6 +41,14 @@
       <section>
         <div id="qr-code-show" class="qrcode">
           <img src="data:image/svg+xml;utf8,<%= @qr_code %>">
+          <div class='email-link'>
+            <%= button_to 'Send Script to Patient', '#', method: :get %>
+            <p> Email: <%= @patient.user.email %>
+            <% if request.referer.include?("/patients/#{@patient.id}/scripts/") %>
+              <p> CODE SENT </p>
+              <% send_patient_code(@qr_code) %>
+            <% end %>
+          </div>
         </div>
       </section>
     </li>

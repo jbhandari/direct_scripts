@@ -1,0 +1,27 @@
+.header {
+  @include span-columns(12);
+  background-color: $light-grey ;
+  color: white;
+  height: em(70);
+  opacity: 0.9;
+  position: fixed;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 60%;
+  }
+
+  li {
+    padding-left: 20px;
+    display: inline;
+  }
+}
+
+#logo {
+  float: left;
+  height: 100px;
+  position: fixed;
+  width: 100px;
+  z-index: 5;
+}
